@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Unit Converter</title>
+  <style>
+    :root {
+      --bg: #f6f7f9; --card: #ffffff; --text: #1d2330; --muted: #5b6577;
+      --accent: #2457d6; --border: #e1e5ec;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root { --bg: #12151c; --card: #1b2029; --text: #e8ebf2; --muted: #9aa4b8; --accent: #7aa2ff; --border: #2b3240; }
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--bg); color: var(--text); font: 16px/1.6 system-ui, -apple-system, "Segoe UI", sans-serif; }
+    main { max-width: 760px; margin: 0 auto; padding: 40px 16px 64px; }
+    h1 { margin: 0 0 4px; font-size: 2rem; }
+    h2 { margin: 0 0 12px; font-size: 1.15rem; }
+    .tagline { margin: 0 0 12px; color: var(--muted); }
+    .badge { display: inline-block; margin-bottom: 24px; padding: 2px 12px; border: 1px solid var(--accent); border-radius: 999px; color: var(--accent); font-size: .85rem; }
+    section { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 20px 24px; margin-bottom: 16px; }
+    ul { margin: 0; padding-left: 20px; }
+    li + li { margin-top: 4px; }
+    pre { margin: 0; padding: 14px 16px; overflow-x: auto; background: var(--bg); border: 1px solid var(--border); border-radius: 8px; font-size: .9rem; }
+    code { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+    table { width: 100%; border-collapse: collapse; font-size: .95rem; }
+    th, td { padding: 8px 6px; text-align: left; border-bottom: 1px solid var(--border); }
+    th { color: var(--muted); font-weight: 600; }
+    a { color: var(--accent); }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Unit Converter</h1>
+    <p class="tagline">A small Python command-line converter for length, temperature and weight.</p>
+    <p class="badge" id="status-badge">Status: development in progress</p>
+
+    <section>
+      <h2>Theme</h2>
+      <p style="margin:0">Unit Converter &mdash; Assignment 2, GitHub Collaboration &amp; Automation.</p>
+    </section>
+
+    <section>
+      <h2>Team</h2>
+      <table>
+        <thead><tr><th>Member</th><th>GitHub</th></tr></thead>
+        <tbody>
+          <tr><td>El Mehdi Rahmoune</td><td>@mehdibuilds</td></tr>
+          <tr><td>Hanae Cherkaoui</td><td>@HanaeCherk90</td></tr>
+          <tr><td>Hiba El Adraoui</td><td>@HibaEladraoui</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>Implemented features</h2>
+      <ul>
+        <li><strong>Length:</strong> mm, cm, m, km, in, ft, yd, mi</li>
+        <li><strong>Temperature:</strong> Celsius, Fahrenheit, Kelvin, with an absolute-zero check</li>
+        <li><strong>Weight:</strong> mg, g, kg, t, oz, lb, st, with a negative-weight check</li>
+        <li><strong>Automated checks:</strong> pytest suite run by GitHub Actions on every push and pull request</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>How to run it</h2>
+<pre><code>git clone https://github.com/mehdibuilds/unit-converter.git
+cd unit-converter
+python app.py length 5 km mi
+python app.py temperature 100 c f
+python app.py weight 2.5 kg lb
+
+# run the tests
+pip install -r requirements.txt
+pytest</code></pre>
+    </section>
+
+    <section>
+      <h2>Links</h2>
+      <p style="margin:0"><a href="https://github.com/mehdibuilds/unit-converter">Source repository on GitHub</a></p>
+    </section>
+  </main>
+</body>
+</html>
